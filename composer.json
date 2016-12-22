@@ -1,0 +1,31 @@
+{
+  "name": "foolz/foolfuuka-plugin-adverts",
+  "type": "foolz-foolfuuka-plugin",
+  "description": "Enables configurable SFW/NSFW advertisements.",
+  "version": "1.0.0",
+  "keywords": ["ads"],
+  "homepage": "http://www.4plebs.org",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "foolz",
+      "email": "support@foolz.us"
+    },
+    {
+      "name": "4plebs",
+      "email": "admin@4plebs.org"
+    }
+  ],
+  "support": {
+    "email": "admin@4plebs.org",
+    "irc": "irc://irc.irchighway.net/fooldriver"
+  },
+  "require" : {
+    "foolz/plugin": "dev"
+  },
+  "extra": {
+    "name": "Adverts",
+    "slug": "ads",
+    "module": "foolfuuka"
+  }
+}
