@@ -31,18 +31,6 @@ class HHVM_Ads
                     ->setCall('Foolz\FoolFuuka\Plugins\Adverts\Model\Ads::displayunder')
                     ->setPriority(5);
 
-                Event::forge('Foolz\FoolFuuka\Model\RadixCollection::structure#var.structure')
-                    ->setCall(function ($result) {
-                        $structure = $result->getParam('structure');
-                        $structure['board_nsfw'] = [
-                            'database' => true,
-                            'boards_preferences' => true,
-                            'type' => 'checkbox',
-                            'help' => _i('This board is NSFW?')
-                        ];
-                        $result->setParam('structure', $structure)->set($structure);
-                    })->setPriority(1);
-
                 Event::forge('Foolz\FoolFrame\Model\Context::handleWeb#obj.afterAuth')
                     ->setCall(function ($result) use ($context) {
                         // don't add the admin panels if the user is not an admin

@@ -13,7 +13,7 @@ class Ads
 		}
 
 		echo '<div class="pull-right">';
-		if ($board->getValue('board_nsfw', false)) {
+		if ($board->getValue('is_nsfw', false)) {
 			echo $result->getObject()->getPreferences()->get('foolfuuka.plugin.adverts.codensfw');
 		} else {
 			echo $result->getObject()->getPreferences()->get('foolfuuka.plugin.adverts.code');
@@ -29,7 +29,7 @@ class Ads
 			$board = $result->getObject()->getBuilderParamManager()->getParam('radix', null);
 			if ($board !== null) {
 				echo '<div style="text-align:center; margin-bottom:10px; padding-top:5px;">';
-				if ($board->getValue('board_nsfw', false)) {
+				if ($board->getValue('is_nsfw', false)) {
 					echo $result->getObject()->getPreferences()->get('foolfuuka.plugin.adverts.codensfwbottom');
 				} else {
 					echo $result->getObject()->getPreferences()->get('foolfuuka.plugin.adverts.codebottom');
