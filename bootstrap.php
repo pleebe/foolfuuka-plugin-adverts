@@ -31,6 +31,10 @@ class HHVM_Ads
                     ->setCall('Foolz\FoolFuuka\Plugins\Adverts\Model\Ads::displayunder')
                     ->setPriority(5);
 
+                Event::forge(['foolfuuka.themes.all_header_code'])
+                    ->setCall('Foolz\FoolFuuka\Plugins\Adverts\Model\Ads::displayheader')
+                    ->setPriority(5);
+
                 Event::forge('Foolz\FoolFrame\Model\Context::handleWeb#obj.afterAuth')
                     ->setCall(function ($result) use ($context) {
                         // don't add the admin panels if the user is not an admin

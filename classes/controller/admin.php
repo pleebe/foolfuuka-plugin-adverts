@@ -58,6 +58,20 @@ class Adverts extends \Foolz\FoolFrame\Controller\Admin
                 'help' => _i('Will be displayed on lewd boards.'),
                 'class' => 'span8'
             ],
+            'foolfuuka.plugin.adverts.headercode' => [
+                'preferences' => true,
+                'type' => 'textarea',
+                'label' => _i('Work safe ad code in &lt;head&gt;'),
+                'help' => _i('Will be put on non lewd boards.'),
+                'class' => 'span8'
+            ],
+            'foolfuuka.plugin.adverts.headercodensfw' => [
+                'preferences' => true,
+                'type' => 'textarea',
+                'label' => _i('Not work safe ad code in &lt;head&gt;'),
+                'help' => _i('Will be put on lewd boards.'),
+                'class' => 'span8'
+            ],
             'separator-2' => [
                 'type' => 'separator-short'
             ],

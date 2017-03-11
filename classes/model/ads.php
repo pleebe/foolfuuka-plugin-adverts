@@ -42,4 +42,17 @@ class Ads
 			echo '</div>';
 		}
 	}
+
+	public static function displayheader($result)
+	{
+		if ($board = $result->getObject()->getBuilderParamManager()->getParam('radix', null)) {
+			if ($board->getValue('is_nsfw', false)) {
+				echo $result->getObject()->getPreferences()->get('foolfuuka.plugin.adverts.headercodensfw');
+			} else {
+				echo $result->getObject()->getPreferences()->get('foolfuuka.plugin.adverts.headercode');
+			}
+		} else {
+			echo $result->getObject()->getPreferences()->get('foolfuuka.plugin.adverts.headercode');
+		}
+	}
 }
